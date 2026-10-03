@@ -1,5 +1,5 @@
 :root {
-    --main-color: rgb(167, 131, 131); /*Väljer senare*/
+    --main-color: rgb(151, 131, 167); /*Väljer senare*/
 }
 html {
     height: 100%;
@@ -7,16 +7,28 @@ html {
 }
 body {
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-areas:
+        "header header header"
+        ". main ."
+        "footer footer footer"
+    ;
     height: 100vh;
+    background-image: url('OF18HC0.jpg');
+    background-repeat: repeat;
+    background-size: 300px, 300px;
     margin: 0px;
 }
 header {
-    background-color: red;
+    grid-area: header;
+    background-color: rgb(51, 19, 66);
 }
 main {
-    background-color: yellow;
+    grid-area: main;
+    background-color: rgb(73, 54, 160);
 }
 footer {
+    grid-area: footer;
     background-color: var(--main-color);
 }
