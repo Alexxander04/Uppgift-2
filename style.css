@@ -1,5 +1,10 @@
 :root {
-    --main-color: rgb(151, 131, 167); /*Väljer senare*/
+    --header-color: rgb(15, 5, 20);
+    --main-color: rgb(2, 1, 7);
+    --footer-color: rgb(32, 30, 34); /*Väljer senare*/
+    --background-size: 250px;
+    --background-image: url('OF18HC0.jpg');
+    --nav-hover-color: rgb(19, 16, 16);
 }
 html {
     height: 100%;
@@ -7,28 +12,45 @@ html {
 }
 body {
     display: grid;
-    grid-template-rows: 1fr 3fr 1fr;
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 7fr 1fr;
+    grid-template-columns: 1fr 7fr 1fr;
     grid-template-areas:
         "header header header"
         ". main ."
         "footer footer footer"
     ;
     height: 100vh;
-    background-image: url('OF18HC0.jpg');
+    background-image: var(--background-image);
     background-repeat: repeat;
-    background-size: 300px, 300px;
+    background-size: var(--background-size), var(--background-size);
     margin: 0px;
 }
 header {
     grid-area: header;
-    background-color: rgb(51, 19, 66);
+    background-color: var(--header-color);
 }
 main {
     grid-area: main;
-    background-color: rgb(73, 54, 160);
+    background-color: var(--main-color);
+    height: 100%;
 }
 footer {
     grid-area: footer;
-    background-color: var(--main-color);
+    background-color: var(--footer-color);
+}
+nav ul { /*Centrerar och tar bort marginaler i naven*/
+    list-style-type: none;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    margin: 0px;
+}
+.nav { /*Listan i nav*/
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 5px;
+}
+.nav:hover {
+    color: var(--nav-hover-color);
 }
