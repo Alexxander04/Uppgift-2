@@ -3,9 +3,9 @@
 Innehåll
 
     /* Webbplatsen behöver bara bestå av en sida, som laddas automatiskt när man navigerar till webbplatsens domännamn. */
-    Sidan skall innehålla header, footer samt minst fyra olika sektioner däremellan..
+    /* Sidan skall innehålla header, footer samt minst fyra olika sektioner däremellan.. */
         Varje sektion skall minst ha tillräckligt med innehåll för att fylla ut en ungefär en skärm på en vanlig mobil. Använd följsamt designläge för att testa hur sidan ser ut i olika skärmstorlekar, där kan du välja bland några vanliga mobilmodeller.
-    Minst två olika bilder (som läggs in med html-kod).
+    /* Minst två olika bilder (som läggs in med html-kod). */
         Bilderna skall vara anpassade att användas på en webbsida.
     /* Sid-headern skall innehålla navigering till de olika sektionerna. */
     /* Texter på sidan skall skrivas på svenska eller engelska. */
@@ -14,10 +14,10 @@ Innehåll
 HTML-kod
 
     /* Relevant titel i title-elementet. */
-    Text strukturerad med korrekta element för rubriker och textstycken.
-        Alltså h1, h2, osv. för rubriker, p för textstycken, etc.
+    /* Text strukturerad med korrekta element för rubriker och textstycken.
+        Alltså h1, h2, osv. för rubriker, p för textstycken, etc. */
     /* Använd relevanta semantiska HTML-element för att strukturera innehållet där det är lämpligt. */
-    Adresser till bilder ska vara relativa adresser, bilderna skall alltså vara en del av din webbplats och inte länkas in från externa källor.
+    /* Adresser till bilder ska vara relativa adresser, bilderna skall alltså vara en del av din webbplats och inte länkas in från externa källor. */
     Koden ska vara validerad och gå igenom validatorn utan felmeddelanden.
 
 CSS-kod
@@ -36,7 +36,7 @@ CSS-kod
     /* Det ska vara en responsiv design, och du skall använda minst en media query för för att anpassa layout till större eller mindre skärmar.
         Du bestämmer själv om du vill använda metoden “mobile-first” eller “desktop-first”. */
         /* Observera att det inte handlar om två helt olika layouter, utan en grundlayout som förändras med media queryn. */
-        Välj gränsvärde i dina media query så att det inte blir någon rullningslist i sidled då fönstrets bredd förändras.
+        /* Välj gränsvärde i dina media query så att det inte blir någon rullningslist i sidled då fönstrets bredd förändras. */
         Tänk på att i en media query endast ta med kod för det som förändras, så att du inte upprepar kod i onödan.
     Minst en sektion skall ha sitt innehåll uppdelat i flera kolumner om det finns tillräckligt med utrymme på skärmen (här kan du använda din media query för att ändra layouten baserat på skärmstorlek).
     Du skall använda dig av CSS-egenskaperna transition och transform på åtminstone något element vardera, där det är lämpligt.
