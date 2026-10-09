@@ -2,7 +2,6 @@
     --header-color: linear-gradient(326deg, rgba(17, 15, 31, 1) 0%, rgba(38, 31, 77, 1) 72%, rgba(52, 28, 92, 1) 100%);
     --main-color: rgb(0, 0, 0);
     --footer-color: rgb(32, 30, 34);
-    /*Väljer senare*/
     --background-size: 250px;
     --background-image: url('OF18HC0.jpg');
     --nav-hover-color: rgb(19, 16, 16);
@@ -65,6 +64,7 @@ main {
 
 section {
     padding: 10px;
+    border-bottom: 1px solid var(--text-color-one);
 }
 
 #section {
@@ -85,6 +85,7 @@ section {
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    border-right: 1px solid var(--text-color-one);
 }
 
 #section4 {
@@ -130,9 +131,18 @@ footer {
     color: var(--text-color-one);
     z-index: 3;
 }
+.footer {
+    padding: 20px;
+}
+.footer a {
+    color: var(--text-color-one);
+    text-decoration: none;
+}
+.footer a:hover {
+    color: grey;
+}
 
 nav ul {
-    /*Centrerar och tar bort marginaler/padding i naven*/
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -164,11 +174,27 @@ nav a {
 img {
     max-width: 100%;
 }
-#image,
-#image2 {
+#image {
     float: right;
+    margin: auto;
+    display: block;
+    padding: 10px;
 }
-
+#image2 {
+    display: block;
+    margin: auto;
+    max-width: 600px;
+    width: 100%;
+    }
+#image3 {
+    display: block;
+    margin: auto; 
+    max-width: 500px;
+    width: 100%;
+}
+#image4, #image5 {
+    max-height: 390px;
+}
 h2 {
     text-align: center;
     font-size: 1.4em;
@@ -179,7 +205,7 @@ h2 {
 }
 
 .paragraph {
-    padding: 20px;
+    padding: 10px;
 }
 
 @media (max-width: 768px) {
@@ -189,6 +215,8 @@ h2 {
 
     .nav {
         text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     main {
@@ -215,10 +243,6 @@ h2 {
     }
 
     #image {
-        float: none;
-    }
-
-    #image2 {
         float: none;
     }
 
