@@ -1,18 +1,21 @@
 :root {
-    --header-color: linear-gradient(to bottom left, rgb(59, 23, 68), rgb(112, 26, 112));
-    --main-color: rgb(2, 1, 7);
-    --footer-color: rgb(32, 30, 34); /*Väljer senare*/
+    --header-color: linear-gradient(326deg, rgba(17, 15, 31, 1) 0%, rgba(38, 31, 77, 1) 72%, rgba(52, 28, 92, 1) 100%);
+    --main-color: rgb(0, 0, 0);
+    --footer-color: rgb(32, 30, 34);
+    /*Väljer senare*/
     --background-size: 250px;
     --background-image: url('OF18HC0.jpg');
     --nav-hover-color: rgb(19, 16, 16);
     --text-color-one: white;
     --shadow-color: rgb(20, 18, 18);
+    --border-color: solid rgb(149, 137, 153) 0.5px;
 }
+
 html {
-    height: 100%;
-    width: 100%;
     scroll-behavior: smooth;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
+
 body {
     display: grid;
     grid-template-rows: auto 7fr auto;
@@ -28,13 +31,18 @@ body {
     background-size: var(--background-size), var(--background-size);
     margin: 0px;
 }
+
 header {
     grid-area: header;
     background: var(--header-color);
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0px 0px 15px 1px;
+    color: var(--text-color-one);
+    z-index: 2;
 }
+
 main {
     grid-area: main;
     background-color: var(--main-color);
@@ -51,85 +59,141 @@ main {
     max-width: 2000px;
     margin: auto;
     align-content: start;
+    box-shadow: 0px 20px 15px 1px;
+    z-index: 1;
 }
+
 section {
     padding: 10px;
 }
+
 #section {
     grid-area: section;
 }
+
 #section h1 {
     text-align: center;
 }
+
 #section2 {
     grid-area: section2;
 }
+
 #section3 {
     grid-area: section3;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
 }
+
 #section4 {
     grid-area: section4;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
 }
+
 aside {
     grid-area: aside;
     border: 1px solid grey;
     margin-right: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
+
 aside h3 {
     text-align: center;
 }
+
 aside p {
     padding: 10px;
     margin: 0px;
 }
+
+aside ul {
+    padding: 0px;
+}
+
+aside ul li {
+    padding-left: 10px;
+    padding-right: 10px;
+    list-style: none;
+    margin: 0px;
+    text-align: left;
+}
+
 footer {
     grid-area: footer;
-    background-color: var(--footer-color);
+    background: var(--header-color);
+    box-shadow: 0px 0px 15px 1px;
+    color: var(--text-color-one);
+    z-index: 3;
 }
-nav ul { /*Centrerar och tar bort marginaler/padding i naven*/
+
+nav ul {
+    /*Centrerar och tar bort marginaler/padding i naven*/
     list-style-type: none;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     margin: 0px;
     padding: 0px;
 }
-.nav { /*Listan i nav*/
+
+nav a {
+    border: var(--border-color);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.nav {
+    /*Listan i nav*/
     text-decoration: none;
+    background-color: black;
     color: white;
     display: block;
     padding: 5px;
-    font-size: 3rem;
+    font-size: 1.5em;
+    transition: color 0.4s ease, background-color 2s ease;
 }
+
 .nav:hover {
     color: var(--nav-hover-color);
+    background-color: white;
 }
 img {
     max-width: 100%;
-    max-height: 100%;
 }
-#image, #image2 {
+#image,
+#image2 {
     float: right;
 }
+
 h2 {
-        text-align: center;
-    }
-/* #image3 {
+    text-align: center;
+    font-size: 1.4em;
+}
 
-} */
-/* #image4 {
+.fclear {
+    clear: right;
+}
 
-} */
+.paragraph {
+    padding: 20px;
+}
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
     }
+
     .nav {
         text-align: center;
     }
+
     main {
         grid-template-columns: auto;
-        grid-template-rows: repeat(5, 1fr);
+        grid-template-rows: repeat(5, auto);
         grid-template-areas:
             "section"
             "section2"
@@ -137,23 +201,33 @@ h2 {
             "section4"
             "aside";
     }
+
     .image {
         display: block;
         margin: auto;
         max-width: 500px;
         width: 100%;
     }
+
     .paragraph {
         margin: auto;
-        padding: 10px;
+        padding: 20px;
     }
+
     #image {
         float: none;
     }
+
     #image2 {
         float: none;
     }
+
+    #aside {
+        width: fit-content;
+        margin: auto;
+    }
 }
+
 @media (max-width: 1000px) {
     body {
         grid-template-rows: auto;
@@ -164,6 +238,7 @@ h2 {
             "footer";
     }
 }
+
 @media (min-width: 768px) {
     #aside_display {
         display: none;
